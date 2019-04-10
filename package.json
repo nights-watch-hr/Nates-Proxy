@@ -1,15 +1,17 @@
 {
-  "name": "",
-  "version": "",
+  "name": "airbnbeats",
+  "version": "1.0.0",
   "description": "",
-  "author": "",
-  "license": "",
+  "main": "index.js",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "nodemon ./server.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"

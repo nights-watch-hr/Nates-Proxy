@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>AirBnBeats</title>
+  </head>
+  <body>
+    <div id="NavBar"></div>
+    <div id="Body"></div>
+    <div id="MediaPlayer"></div>
+    <script src="/lib/react.development.js"></script>
+    <script src="/lib/react-dom.development.js"></script>
+    <script src="http://localhost:3001/navBar.js"></script>
+    <script src="http://localhost:3069/app.js"></script>
+    <script src="http://localhost:3737/mediaPlayer.js"></script>
+    <script>
+      ReactDOM.render(
+        React.createElement(NavBar),
+        document.getElementById('NavBar')
+      );
+      ReactDOM.render(
+        React.createElement(Body),
+        document.getElementById('Body')
+      );
+      ReactDOM.render(
+        React.createElement(MediaPlayer),
+        document.getElementById('MediaPlayer')
+      );
+    </script>
+  </body>
+</html>
