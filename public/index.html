@@ -8,27 +8,16 @@
     <title>AirBnBeats</title>
   </head>
   <body>
-    <div id="NavBar"></div>
-    <div id="Body"></div>
-    <div id="MediaPlayer"></div>
+    <div id="navbar"></div>
+    <div id="body"></div>
+    <div id="mediaPlayer"></div>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
-    <script src="http://localhost:3001/navBar.js"></script>
-    <script src="http://localhost:3069/app.js"></script>
-    <script src="http://localhost:3737/mediaPlayer.js"></script>
-    <script>
-      ReactDOM.render(
-        React.createElement(NavBar),
-        document.getElementById('NavBar')
-      );
-      ReactDOM.render(
-        React.createElement(Body),
-        document.getElementById('Body')
-      );
-      ReactDOM.render(
-        React.createElement(MediaPlayer),
-        document.getElementById('MediaPlayer')
-      );
-    </script>
+    <script src="http://localhost:3001/bundle.js"></script>
+    <script src="http://localhost:3069/bundle.js"></script>
+    <script src="http://localhost:3737/bundle.js"></script>
+    <!-- <script src="https://s3-us-west-1.amazonaws.com/airbnbeats/Bundles/navbarBundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/airbnbeats/Bundles/bodyBundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/airbnbeats/Bundles/mediaPlayerBundle.js"></script> -->
   </body>
 </html>

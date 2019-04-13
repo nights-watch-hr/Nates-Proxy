@@ -1,15 +1,17 @@
 {
   "name": "airbnbeats",
   "version": "1.0.0",
+  "main": "server/index.js",
   "description": "",
-  "main": "index.js",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "nodemon server/index.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "morgan": "^1.9.1"
   },
