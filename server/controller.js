@@ -5,14 +5,14 @@ const controller = {
     axios
       .get('http://localhost:3001/api')
       .then(response => res.status(200).send(response.data))
-      .catch(err => console.log(err));
+      .catch(err => res.status(404).send(err));
   },
 
   getAllBody: (req, res) => {
     axios
       .get('http://localhost:3069/api/beats')
       .then(response => res.status(200).send(response.data))
-      .catch(err => console.log(err));
+      .catch(err => res.status(404).send(err));
   },
 
   getOneBody: (req, res) => {
@@ -20,15 +20,23 @@ const controller = {
     axios
       .get(`http://localhost:3069/api/beats/${id}`)
       .then(response => response)
-      .catch(err => console.log(err));
+      .catch(err => res.status(404).send(err));
   },
 
-  getOneMediaPlayer: (req, res) => {
+  playSong: (req, res) => {
     let { id } = req.params;
     axios
-      .get(`http://localhost:3737/api/tracks/${id}`)
-      .then(response => response)
-      .catch(err => console.log(err));
+      .get(`ec2-3-87-73-193.compute-1.amazonaws.com/${id}`)
+      .then(response => console.log(response))
+      .catch(err => res.status(404).send(err));
+  },
+
+  queueSong: (req, res) => {
+    let { id } = req.params;
+    axios
+      .get(`ec2-3-87-73-193.compute-1.amazonaws.com/${id}`)
+      .then(response => console.log(response))
+      .catch(err => res.status(404).send(err));
   }
 };
 
