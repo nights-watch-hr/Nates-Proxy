@@ -7,8 +7,8 @@ router.route('/beats').get(controller.getAllBody);
 
 router.route('/beats/:id').get(controller.getOneBody);
 
-router.route('/play/:id').get(controller.playSong);
+router.route('/play/:id').get(controller.playTrack);
 
-router.route('/queue/:id').get(controller.queueSong);
+router.route('/queue/:id').get(controller.queueTrack);
 
 module.exports = router;
