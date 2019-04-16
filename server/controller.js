@@ -39,19 +39,43 @@ const controller = {
       .catch(err => res.status(404).send(err));
   }
 
-  // playSong: (req, res) => {
-  //   let { id } = req.params;
+  // For AWS Deployment
+  //
+  // getAllSearch: (req, res) => {
   //   axios
-  //     .get(`ec2-3-87-73-193.compute-1.amazonaws.com/${id}`)
-  //     .then(response => console.log(response.data))
+  //     .get('https://http://18.218.143.3:3001')
+  //     .then(response => res.status(200).send(response.data))
   //     .catch(err => res.status(404).send(err));
   // },
 
-  // queueSong: (req, res) => {
+  // getAllBody: (req, res) => {
+  //   axios
+  //     .get('https://54.165.200.109:3069')
+  //     .then(response => res.status(200).send(response.data))
+  //     .catch(err => res.status(404).send(err));
+  // },
+
+  // getOneBody: (req, res) => {
   //   let { id } = req.params;
   //   axios
-  //     .get(`ec2-3-87-73-193.compute-1.amazonaws.com/${id}`)
-  //     .then(response => console.log(response.data))
+  //     .get(`https://54.165.200.109:3069/${id}`)
+  //     .then(response => response.data)
+  //     .catch(err => res.status(404).send(err));
+  // },
+
+  // playTrack: (req, res) => {
+  //   let { id } = req.params;
+  //   axios
+  //     .get(`https://3.84.119.45:3737/${id}`)
+  //     .then(response => res.status(200).send(response.data))
+  //     .catch(err => res.status(404).send(err));
+  // },
+
+  // queueTrack: (req, res) => {
+  //   let { id } = req.params;
+  //   axios
+  //     .get(`https://3.84.119.45:3737/${id}`)
+  //     .then(response => res.status(200).send(response.data))
   //     .catch(err => res.status(404).send(err));
   // }
 };
