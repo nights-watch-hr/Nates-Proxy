@@ -3,14 +3,14 @@ const axios = require('axios');
 const controller = {
   getAllSearch: (req, res) => {
     axios
-      .get('http://localhost:3001/api')
+      .get('http://3.84.204.134:3001/api')
       .then(response => res.status(200).send(response.data))
       .catch(err => res.status(404).send(err));
   },
 
   getAllBody: (req, res) => {
     axios
-      .get('http://localhost:3069/api/beats')
+      .get('http://13.57.33.1:3069/api/beats')
       .then(response => res.status(200).send(response.data))
       .catch(err => res.status(404).send(err));
   },
@@ -18,7 +18,7 @@ const controller = {
   getOneBody: (req, res) => {
     let { id } = req.params;
     axios
-      .get(`http://localhost:3069/api/beats/${id}`)
+      .get(`http://13.57.33.1:3069/api/beats/${id}`)
       .then(response => response.data)
       .catch(err => res.status(404).send(err));
   },
@@ -26,7 +26,7 @@ const controller = {
   playTrack: (req, res) => {
     let { id } = req.params;
     axios
-      .get(`http://localhost:3737/api/playTracks/${id}`)
+      .get(`http://3.83.65.140:3737/api/playTracks/${id}`)
       .then(response => res.status(200).send(response.data))
       .catch(err => res.status(404).send(err));
   },
@@ -34,7 +34,7 @@ const controller = {
   queueTrack: (req, res) => {
     let { id } = req.params;
     axios
-      .get(`http://localhost:3737/api/queueTracks/${id}`)
+      .get(`http://3.83.65.140:3737/api/queueTracks/${id}`)
       .then(response => res.status(200).send(response.data))
       .catch(err => res.status(404).send(err));
   }
