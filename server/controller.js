@@ -26,7 +26,7 @@ const controller = {
   playTrack: (req, res) => {
     let { id } = req.params;
     axios
-      .get(`http://3.83.65.140:3737/api/playTracks/${id}`)
+      .get(`http://54.152.100.141:3737/api/playTracks/${id}`)
       .then(response => res.status(200).send(response.data))
       .catch(err => res.status(404).send(err));
   },
@@ -34,7 +34,7 @@ const controller = {
   queueTrack: (req, res) => {
     let { id } = req.params;
     axios
-      .get(`http://3.83.65.140:3737/api/queueTracks/${id}`)
+      .get(`http://54.152.100.141:3737/api/queueTracks/${id}`)
       .then(response => res.status(200).send(response.data))
       .catch(err => res.status(404).send(err));
   }
